@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from 'react'
+import { useCallback, useEffect, useState, type ReactNode } from 'react'
 import {
   about,
   footer,
@@ -13,6 +13,76 @@ import {
 
 const sectionShell = 'mx-auto max-w-7xl px-6 md:px-10 lg:px-14'
 const sectionSplit = `${sectionShell} grid gap-10 md:grid-cols-2 md:items-center md:gap-12`
+
+const SPLASH_MS = 3000
+
+function preloadImage(src: string) {
+  return new Promise<void>((resolve) => {
+    const img = new Image()
+    img.onload = () => resolve()
+    img.onerror = () => resolve()
+    img.src = src
+  })
+}
+
+function preloadImages(sources: string[]) {
+  return Promise.all(sources.map(preloadImage))
+}
+
+const criticalImages = [
+  heroImage,
+  heroLogo,
+  ...introSlides.map((slide) => slide.image),
+  ...portfolio.map((item) => item.src),
+  ...services.map((service) => service.image),
+  partners.image,
+  about.image,
+  about.logo,
+  about.stamp,
+  footer.logo,
+]
+
+function SplashScreen({ onDone }: { onDone: () => void }) {
+  const [leaving, setLeaving] = useState(false)
+
+  useEffect(() => {
+    let cancelled = false
+
+    const finish = () => {
+      if (cancelled) return
+      setLeaving(true)
+      window.setTimeout(() => {
+        if (!cancelled) onDone()
+      }, 700)
+    }
+
+    Promise.all([
+      preloadImages(criticalImages),
+      new Promise<void>((resolve) => {
+        window.setTimeout(resolve, SPLASH_MS)
+      }),
+    ]).then(finish)
+
+    return () => {
+      cancelled = true
+    }
+  }, [onDone])
+
+  return (
+    <div
+      className={`fixed inset-0 z-[100] flex items-center justify-center bg-black ${
+        leaving ? 'animate-splash-out' : ''
+      }`}
+      aria-hidden={leaving}
+    >
+      <img
+        src={footer.logo}
+        alt="PRESTIGE"
+        className="animate-splash-logo h-16 w-auto object-contain md:h-24"
+      />
+    </div>
+  )
+}
 
 function SectionLabel({
   children,
@@ -107,13 +177,22 @@ function Intro() {
             </a>
           </p>
         </div>
-        <div className="min-w-0 overflow-hidden">
-          <img
-            key={slide.image}
-            src={slide.image}
-            alt={slide.title}
-            className="aspect-[4/3] w-full object-cover transition duration-700"
-          />
+        <div className="relative min-w-0 overflow-hidden">
+          {introSlides.map((item, index) => (
+            <img
+              key={item.title}
+              src={item.image}
+              alt={item.title}
+              loading="eager"
+              decoding="async"
+              fetchPriority={index === 0 ? 'high' : 'low'}
+              className={`aspect-[4/3] w-full object-cover transition-opacity duration-500 ${
+                index === active
+                  ? 'relative opacity-100'
+                  : 'pointer-events-none absolute inset-0 opacity-0'
+              }`}
+            />
+          ))}
         </div>
       </div>
 
@@ -432,8 +511,12 @@ function Footer() {
 }
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true)
+  const hideSplash = useCallback(() => setShowSplash(false), [])
+
   return (
     <div id="top" className="min-h-screen bg-black">
+      {showSplash && <SplashScreen onDone={hideSplash} />}
       <Hero />
       <Intro />
       <PortfolioStrip />
