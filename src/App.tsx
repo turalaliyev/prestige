@@ -48,23 +48,22 @@ function SplashScreen({ onDone }: { onDone: () => void }) {
   useEffect(() => {
     let cancelled = false
 
-    const finish = () => {
+    // Warm the cache in the background — does not block the splash timer.
+    void preloadImages(criticalImages)
+
+    const leaveTimer = window.setTimeout(() => {
       if (cancelled) return
       setLeaving(true)
-      window.setTimeout(() => {
-        if (!cancelled) onDone()
-      }, 700)
-    }
+    }, SPLASH_MS)
 
-    Promise.all([
-      preloadImages(criticalImages),
-      new Promise<void>((resolve) => {
-        window.setTimeout(resolve, SPLASH_MS)
-      }),
-    ]).then(finish)
+    const doneTimer = window.setTimeout(() => {
+      if (!cancelled) onDone()
+    }, SPLASH_MS + 700)
 
     return () => {
       cancelled = true
+      window.clearTimeout(leaveTimer)
+      window.clearTimeout(doneTimer)
     }
   }, [onDone])
 
