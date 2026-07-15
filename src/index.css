@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Syne:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-prestige: #7cfc4a;
+  --color-prestige-dim: #5fd433;
+  --color-ink: #0a0a0a;
+  --color-mist: #f4f4f2;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'Manrope', sans-serif;
+  --font-brand: 'Caveat', cursive;
+  --font-inter: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: #000;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-prestige);
+  color: #000;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: scale(1.05) translateY(0);
+  }
+  50% {
+    transform: scale(1.08) translateY(-1.5%);
+  }
+}
+
+.animate-rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade {
+  animation: fade-in 1.2s ease both;
+}
+
+.animate-drift {
+  animation: drift 18s ease-in-out infinite;
+}
+
+.delay-1 {
+  animation-delay: 0.15s;
+}
+.delay-2 {
+  animation-delay: 0.3s;
+}
+.delay-3 {
+  animation-delay: 0.45s;
+}
