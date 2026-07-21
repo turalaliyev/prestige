@@ -49,11 +49,11 @@ export const dictionaries: Record<Lang, Dictionary> = {
     },
     partners: {
       label: 'Partners & recommendations',
-      body: 'We value the trust of our clients and partners, so every project focuses on quality, deadlines and attention to detail. Over the years we have completed projects for companies across many industries — from restaurants and stores to major brands and manufacturers. We are recommended for our professional approach, modern solutions and reliable delivery of any complexity. We aim for long-term partnerships and projects that help businesses stand out and grow.',
+      body: 'We value the trust of our clients and partners, so every project focuses on quality, deadlines and attention to detail. Over the years we have completed projects for companies across many industries — from restaurants and stores to major brands and manufacturers. We are recommended for our professional approach, modern solutions and reliable delivery of projects of any complexity. We aim for long-term partnerships and projects that help businesses stand out and grow.',
     },
     about: {
       title: 'Advertising company',
-      body: 'PRESTIGE Group of Companies has been operating in the Azerbaijani market for many years. The company started as a service advertising agency and gradually defined its core directions. Today the group focuses on advertising and production — delivering full-cycle solutions from design to manufacturing and installation.',
+      body: 'PRESTIGE Group of Companies has been operating in the Azerbaijani market for many years. The company started as a full-service advertising agency and gradually defined its core directions. Today the group focuses on advertising and production — delivering full-cycle solutions from design to manufacturing and installation.',
       experience: '18 YEARS OF EXPERIENCE!',
     },
     footer: {
@@ -63,12 +63,12 @@ export const dictionaries: Record<Lang, Dictionary> = {
       addressTitle: 'Address',
       address: 'Şamil Əzizbəyov 154, Baku, Azerbaijan',
       phones: [
-        'Napkins, toothpicks, sugar & disposables',
+        'Napkins, toothpicks, granulated sugar & disposables',
         'Bags, cups & packaging products',
         'Laser & offset printing',
-        'Advertising constructions',
+        'Advertising structures',
         'Promo souvenirs',
-        'Vinyl works',
+        'Vinyl graphics',
         'Wide-format printing',
       ],
     },
@@ -98,17 +98,17 @@ export const dictionaries: Record<Lang, Dictionary> = {
         body: 'Разрабатываем и производим рекламные конструкции любой сложности — от вывесок и световых коробов до объёмных букв, интерьерной и наружной рекламы. Работаем со световыми элементами, LED, виниловыми плёнками, плоттерной резкой, оклейкой витрин и транспорта. Выполняем монтаж любой сложности. Наша задача — сделать рекламу заметной, качественной и долговечной.',
       },
       merch: {
-        label: 'Промо сувениры',
+        label: 'Промосувениры',
         body: 'Создаём брендированные промосувениры и корпоративные подарки — от ручек, флешек и ежедневников до креативных индивидуальных решений. Многолетний опыт работы с иностранными компаниями и банковским сектором помогает вашему бренду запомниться.',
       },
     },
     partners: {
       label: 'Партнёры и рекомендации',
-      body: 'Мы ценим доверие клиентов и партнёров, поэтому в каждом проекте делаем акцент на качестве, сроках и внимании к деталям. За время работы мы реализовали проекты для компаний из разных сфер — от ресторанов и магазинов до крупных брендов и производств. Нас рекомендуют за профессиональный подход, современные решения и надёжное выполнение задач любой сложности.',
+      body: 'Мы ценим доверие клиентов и партнёров, поэтому в каждом проекте делаем акцент на качестве, сроках и внимании к деталям. За время работы мы реализовали проекты для компаний из разных сфер — от ресторанов и магазинов до крупных брендов и производств. Нас рекомендуют за профессиональный подход, современные решения и надёжное выполнение задач любой сложности. Мы стремимся к долгосрочному партнёрству и проектам, которые помогают бизнесу выделяться и расти.',
     },
     about: {
       title: 'Рекламная компания',
-      body: 'Группа компаний PRESTIGE работает на рынке Азербайджана много лет. Изначально компания существовала как сервисная рекламная компания и постепенно определила основные направления деятельности. Сегодня группа сосредоточена в рекламно-производственной сфере — от дизайна до изготовления и монтажа.',
+      body: 'Группа компаний PRESTIGE работает на рынке Азербайджана много лет. Изначально компания существовала как сервисная рекламная компания и постепенно определила основные направления деятельности. Сегодня группа сосредоточена на рекламно-производственной сфере — от дизайна до изготовления и монтажа.',
       experience: '18 ЛЕТ ОПЫТА!',
     },
     footer: {
@@ -118,7 +118,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
       addressTitle: 'Адрес',
       address: 'Şamil Əzizbəyov 154, Баку, Азербайджан',
       phones: [
-        'Салфетки, зубочистки, сахар, одноразовая продукция',
+        'Салфетки, зубочистки, сахарный песок, одноразовая продукция',
         'Пакеты, стаканы и упаковочная продукция',
         'Лазерная и офсетная печать',
         'Рекламные конструкции',
@@ -146,11 +146,11 @@ export const dictionaries: Record<Lang, Dictionary> = {
     services: {
       packaging: {
         label: 'Qablaşdırma',
-        body: 'Restoranlar, kafelər, qəhvəxanalar və çatdırılma xidmətləri üçün stilistik və praktik qablaşdırma yaradırıq. Dizayn brendinizi önə çıxarır və məhsulun təqdimatını yadda qalan edir. Burger və pizza qutuları, stəkanlar, paketlər, konteynerlər, suşi və desert qablaşdırması, takeaway həlləri istehsal edirik — keyfiyyətli materiallar və müasir çap ilə.',
+        body: 'Restoranlar, kafelər, qəhvəxanalar və çatdırılma xidmətləri üçün zövqlü və praktik qablaşdırma yaradırıq. Dizayn brendinizi önə çıxarır və məhsulun təqdimatını yadda qalan edir. Burger və pizza qutuları, stəkanlar, paketlər, konteynerlər, suşi və desert qablaşdırması, takeaway həlləri istehsal edirik — keyfiyyətli materiallar və müasir çap ilə.',
       },
       advertising: {
         label: 'Reklam',
-        body: 'İstənilən mürəkkəblikdə reklam konstrukiyaları layihələndirir və istehsal edirik — lövhələrdən və işıq qutularından 3D hərflərə, interyer və açıq hava reklamına qədər. LED işıqlandırma, vinil plyonkalar, plotter kəsimi, vitrin və nəqliyyat brendləməsi ilə işləyirik. İstənilən mürəkkəblikdə montaj da həyata keçiririk. Məqsədimiz — görünən, keyfiyyətli və uzunömürlü reklamdır.',
+        body: 'İstənilən mürəkkəblikdə reklam konstruksiyaları layihələndirir və istehsal edirik — lövhələrdən və işıq qutularından 3D hərflərə, interyer və açıq hava reklamına qədər. LED işıqlandırma, vinil plyonkalar, plotter kəsimi, vitrin və nəqliyyat brendləməsi ilə işləyirik. İstənilən mürəkkəblikdə montaj da həyata keçiririk. Məqsədimiz — görünən, keyfiyyətli və uzunömürlü reklamdır.',
       },
       merch: {
         label: 'Promo suvenirlər',
@@ -159,7 +159,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
     },
     partners: {
       label: 'Tərəfdaşlar və tövsiyələr',
-      body: 'Müştəri və tərəfdaşlarımızın etimadını qiymətləndiririk, ona görə hər layihədə keyfiyyətə, müddətlərə və detallara diqqət yetiririk. İllər ərzində müxtəlif sahələrdən — restoran və mağazalardan iri brendlərə və istehsalçılara qədər — layihələr həyata keçirmişik. Peşəkar yanaşma, müasir həllər və etibarlı icra üçün tövsiyə olunuruq.',
+      body: 'Müştəri və tərəfdaşlarımızın etimadını qiymətləndiririk, ona görə hər layihədə keyfiyyətə, müddətlərə və detallara diqqət yetiririk. İllər ərzində müxtəlif sahələrdən — restoran və mağazalardan iri brendlərə və istehsalçılara qədər — layihələr həyata keçirmişik. Peşəkar yanaşma, müasir həllər və etibarlı icra üçün tövsiyə olunuruq. Uzunmüddətli tərəfdaşlıq və biznesin seçilməsinə, inkişafına kömək edən layihələr hədəfləyirik.',
     },
     about: {
       title: 'Reklam şirkəti',
@@ -173,10 +173,10 @@ export const dictionaries: Record<Lang, Dictionary> = {
       addressTitle: 'Ünvan',
       address: 'Şamil Əzizbəyov 154, Bakı, Azərbaycan',
       phones: [
-        'Salfetlər, diş çubuqları, şəkər, birdəfəlik məhsullar',
+        'Salfetlər, diş çubuqları, şəkər tozu, birdəfəlik məhsullar',
         'Paketlər, stəkanlar və qablaşdırma məhsulları',
         'Lazer və ofset çap',
-        'Reklam konstrukiyaları',
+        'Reklam konstruksiyaları',
         'Promo suvenirlər',
         'Vinil işləri',
         'Genişformatlı çap',
