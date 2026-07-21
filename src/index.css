@@ -85,6 +85,15 @@ body {
   }
 }
 
+@keyframes marquee-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-rise {
   animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -95,6 +104,71 @@ body {
 
 .animate-drift {
   animation: drift 18s ease-in-out infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+.portfolio-marquee:hover {
+  animation-play-state: paused;
+}
+
+.reveal {
+  opacity: 0;
+  transition:
+    opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-up {
+  transform: translate3d(0, 44px, 0);
+}
+
+.reveal-down {
+  transform: translate3d(0, -36px, 0);
+}
+
+.reveal-left {
+  transform: translate3d(-48px, 0, 0);
+}
+
+.reveal-right {
+  transform: translate3d(48px, 0, 0);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.reveal-fade {
+  transform: none;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-right {
+    animation: none;
+    transform: translateX(0);
+  }
+
+  .reveal,
+  .reveal-up,
+  .reveal-down,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .reveal-fade {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .animate-splash-logo {
