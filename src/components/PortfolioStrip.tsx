@@ -1,6 +1,5 @@
 import { portfolio } from '../data/content'
 import { useLanguage } from '../i18n/LanguageContext'
-import { Reveal } from './Reveal'
 
 const offsets = [
   'md:-translate-y-12',
@@ -20,7 +19,7 @@ export function PortfolioStrip() {
 
   return (
     <section id="work" className="overflow-hidden bg-mist text-ink">
-      <Reveal variant="fade" className="py-16 md:py-28" threshold={0.12}>
+      <div className="py-16 md:py-28">
         <div className="portfolio-marquee flex w-max animate-marquee-right items-center gap-4 md:gap-6">
           {loop.map((item, index) => {
             const sourceIndex = index % portfolio.length
@@ -33,7 +32,7 @@ export function PortfolioStrip() {
               >
                 <img
                   src={item.src}
-                  alt={t.portfolioAlts[sourceIndex]}
+                  alt={t.portfolioAlts[sourceIndex] ?? ''}
                   className="aspect-[3/5] w-full object-cover transition duration-500 group-hover:scale-105 md:min-h-[320px]"
                   draggable={false}
                 />
@@ -41,7 +40,7 @@ export function PortfolioStrip() {
             )
           })}
         </div>
-      </Reveal>
+      </div>
     </section>
   )
 }

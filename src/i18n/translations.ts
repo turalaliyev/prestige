@@ -10,6 +10,21 @@ export type Dictionary = {
   heroLine: string
   heroSideWords: [string, string, string]
   changeLanguage: string
+  intro: {
+    label: string
+    contactPrefix: string
+    prev: string
+    next: string
+    slideLabel: string
+    slides: {
+      wideformat: { title: string; subtitle: string; body: string }
+      construction: { title: string; subtitle: string; body: string }
+      vinyl: { title: string; subtitle: string; body: string }
+      print: { title: string; subtitle: string; body: string }
+      merch: { title: string; subtitle: string; body: string }
+      napkins: { title: string; subtitle: string; body: string }
+    }
+  }
   services: {
     packaging: { label: string; body: string }
     advertising: { label: string; body: string }
@@ -33,6 +48,48 @@ export const dictionaries: Record<Lang, Dictionary> = {
     heroLine: 'Full-cycle advertising production',
     heroSideWords: ['ADVERTISING', 'PACKAGING', 'MARKETING'],
     changeLanguage: 'Change language',
+    intro: {
+      label: 'Services',
+      contactPrefix: 'For more information, please call',
+      prev: 'Previous slide',
+      next: 'Next slide',
+      slideLabel: 'Slide',
+      slides: {
+        wideformat: {
+          title: 'Wide-format printing and plotter cutting',
+          subtitle: 'In-house equipment with design support',
+          body: 'In-house equipment and experienced staff let you order directly from the producer. Wide-format printing (3.2 and 5 m) on banner, vinyl and canvas, plus plotter and laser cutting for any advertising materials.',
+        },
+        construction: {
+          title: 'Advertising structures and installation',
+          subtitle:
+            'Our own workshop, deep experience with non-standard tasks, and a wide range of work',
+          body: 'For over 8 years we have produced outdoor advertising in-house: lightboxes, signs, 3D letters, pylons and boards. Installation and vehicle wrapping — more than 8,000 cars, facades, malls and custom projects.',
+        },
+        vinyl: {
+          title: 'Vinyl work and vehicle wrapping',
+          subtitle: '',
+          body: 'For over 8 years we have delivered vinyl work and vehicle wrapping of any complexity. Quality materials, our own workshop and a hands-on approach — for corporate fleets, buses and custom media with lasting results.',
+        },
+        print: {
+          title: 'Laser and offset printing',
+          subtitle:
+            'Corporate-segment experience with international companies in several countries',
+          body: 'We entered laser and offset printing relatively recently, but already have solid experience and a strong client base (not only in Azerbaijan). Low prices and high quality are the core of our work in this direction.',
+        },
+        merch: {
+          title: 'Promo souvenirs and gifts',
+          subtitle: 'A decade of experience and a large portfolio',
+          body: 'Years of work with international companies and banks. We help with promo souvenirs: from flash drives, pens and notebooks to creative custom solutions. Surprising with gifts is our strength.',
+        },
+        napkins: {
+          title: 'Wet and paper napkin production',
+          subtitle:
+            'A leading position in wet wipes, with experience in government institutions and HoReCa',
+          body: 'In three years we became a reliable HoReCa partner for hotels and restaurants and one of the local leaders in wet wipe production. We also offer paper napkins and other HoReCa products.',
+        },
+      },
+    },
     services: {
       packaging: {
         label: 'Packaging',
@@ -61,7 +118,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
       phonesTitle: 'Contact numbers',
       mailTitle: 'Email',
       addressTitle: 'Address',
-      address: 'Şamil Əzizbəyov 154, Baku, Azerbaijan',
+      address: 'Baku, Nizami district, Bəhruz Nuriyev street 24a',
       phones: [
         'Napkins, toothpicks, granulated sugar & disposables',
         'Bags, cups & packaging products',
@@ -88,6 +145,48 @@ export const dictionaries: Record<Lang, Dictionary> = {
     heroLine: 'Рекламное производство полного цикла',
     heroSideWords: ['РЕКЛАМА', 'УПАКОВКА', 'МАРКЕТИНГ'],
     changeLanguage: 'Сменить язык',
+    intro: {
+      label: 'Услуги',
+      contactPrefix: 'За дополнительной информацией обращайтесь по телефону',
+      prev: 'Предыдущий слайд',
+      next: 'Следующий слайд',
+      slideLabel: 'Слайд',
+      slides: {
+        wideformat: {
+          title: 'Широкоформатная печать и плоттерная резка',
+          subtitle: 'Свое оборудование с дизайнерской поддержкой',
+          body: 'Собственное оборудование и опытный персонал позволяют заказывать напрямую у производителя. Широкоформатная печать (3,2 и 5 м) на баннере, виниле и холсте, плоттерная и лазерная резка любых рекламных материалов.',
+        },
+        construction: {
+          title: 'Изготовление рекламных конструкций и монтажные работы',
+          subtitle:
+            'Свой собственный цех, огромный опыт в решении нестандартных задач, широкий спектр работ',
+          body: 'Более 8 лет производим наружную рекламу на собственном производстве: лайтбоксы, вывески, объёмные буквы, пилоны и борды. Монтаж и оклейка транспорта — более 8000 автомобилей, фасады, ТЦ и нестандартные проекты.',
+        },
+        vinyl: {
+          title: 'Виниловые работы и оклейка транспорта',
+          subtitle: '',
+          body: 'Более 8 лет выполняем виниловые работы и оклейку транспорта любой сложности. Качественные материалы, собственный цех и ручной подход — для корпоративных авто, автобусов и нестандартных носителей с долговечным результатом.',
+        },
+        print: {
+          title: 'Лазерная и офсетная печать',
+          subtitle:
+            'Опыт работы в корпоративном сегменте с международными компаниями в нескольких странах мира',
+          body: 'На рынок лазерной и офсетной печати мы вышли относительно недавно, но несмотря на это мы уже имеем небольшой опыт работы в данной сфере и неплохой пул клиентов (кстати не только в Азербайджане). Максимально низкие цены и высокое качество – это и есть критерий нашей работы в этом направлении.',
+        },
+        merch: {
+          title: 'Промосувениры и подарки',
+          subtitle: 'Десятилетний опыт работы большое портфолио',
+          body: 'Многолетний опыт с иностранными компаниями и банками. Помогаем с промосувенирами: от флешек, ручек и ежедневников до креативных индивидуальных решений. Удивлять подарками — наша сильная сторона.',
+        },
+        napkins: {
+          title: 'Производство влажных и бумажных салфеток',
+          subtitle:
+            'Лидерская позиция на рынке влажных салфеток опыт работы с государственными учреждениями и с сегментом HoReCa',
+          body: 'За три года стали надёжным партнёром отелей и ресторанов HoReCa и одним из лидеров по влажным салфеткам местного производства. Также предлагаем бумажные салфетки и другие продукты для сегмента HoReCa.',
+        },
+      },
+    },
     services: {
       packaging: {
         label: 'Упаковка',
@@ -116,7 +215,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
       phonesTitle: 'Контактные номера',
       mailTitle: 'Почта',
       addressTitle: 'Адрес',
-      address: 'Şamil Əzizbəyov 154, Баку, Азербайджан',
+      address: 'г. Баку, Низами район, ул. Бехруз Нуриев 24a',
       phones: [
         'Салфетки, зубочистки, сахарный песок, одноразовая продукция',
         'Пакеты, стаканы и упаковочная продукция',
@@ -143,6 +242,48 @@ export const dictionaries: Record<Lang, Dictionary> = {
     heroLine: 'Tam dövrəli reklam istehsalı',
     heroSideWords: ['REKLAM', 'QABLAŞDIRMA', 'MARKETİNQ'],
     changeLanguage: 'Dili dəyiş',
+    intro: {
+      label: 'Xidmətlər',
+      contactPrefix: 'Əlavə məlumat üçün zəng edin',
+      prev: 'Əvvəlki slayd',
+      next: 'Növbəti slayd',
+      slideLabel: 'Slayd',
+      slides: {
+        wideformat: {
+          title: 'Genişformatlı çap və plotter kəsimi',
+          subtitle: 'Öz avadanlığımız və dizayn dəstəyi',
+          body: 'Öz avadanlığımız və təcrübəli personal birbaşa istehsalçıdan sifariş etməyə imkan verir. Banner, vinil və kətan üzərində genişformatlı çap (3,2 və 5 m), həmçinin istənilən reklam materialları üçün plotter və lazer kəsimi.',
+        },
+        construction: {
+          title: 'Reklam konstruksiyaları və montaj işləri',
+          subtitle:
+            'Öz seximiz, qeyri-standart tapşırıqlarda böyük təcrübə və geniş iş spektri',
+          body: '8 ildən artıqdır öz istehsalımızda açıq hava reklamı hazırlayırıq: işıq qutuları, lövhələr, 3D hərflər, pilonlar və bordlar. Montaj və nəqliyyat brendləməsi — 8000-dən çox avtomobil, fasadlar, TİM və fərdi layihələr.',
+        },
+        vinyl: {
+          title: 'Vinil işləri və nəqliyyat brendləməsi',
+          subtitle: '',
+          body: '8 ildən artıqdır istənilən mürəkkəblikdə vinil işləri və nəqliyyat brendləməsi həyata keçiririk. Keyfiyyətli materiallar, öz seximiz və fərdi yanaşma — korporativ avtomobillər, avtobuslar və uzunömürlü nəticə üçün fərdi daşıyıcılar.',
+        },
+        print: {
+          title: 'Lazer və ofset çap',
+          subtitle:
+            'Bir neçə ölkədə beynəlxalq şirkətlərlə korporativ seqmentdə təcrübə',
+          body: 'Lazer və ofset çap bazarına nisbətən yaxınlarda daxil olmuşuq, lakin artıq bu sahədə təcrübəmiz və möhkəm müştəri bazamız var (təkcə Azərbaycanda deyil). Aşağı qiymət və yüksək keyfiyyət bu istiqamətdə işimizin əsas meyarlarıdır.',
+        },
+        merch: {
+          title: 'Promo suvenirlər və hədiyyələr',
+          subtitle: 'On illik təcrübə və geniş portfolio',
+          body: 'Beynəlxalq şirkətlər və banklarla illərin təcrübəsi. Promo suvenirlərdə kömək edirik: fləşlərdən, qələmlərdən və dəftərlərdən kreativ fərdi həllərə qədər. Hədiyyələrlə heyrətləndirmək — güclü tərəfimizdir.',
+        },
+        napkins: {
+          title: 'Nəm və kağız salfet istehsalı',
+          subtitle:
+            'Nəm salfet bazarında lider mövqe, dövlət qurumları və HoReCa ilə təcrübə',
+          body: 'Üç ildə otel və restoranlar üçün etibarlı HoReCa tərəfdaşı və yerli nəm salfet istehsalında liderlərdən birinə çevrildik. Həmçinin kağız salfetlər və digər HoReCa məhsulları təklif edirik.',
+        },
+      },
+    },
     services: {
       packaging: {
         label: 'Qablaşdırma',
@@ -171,7 +312,7 @@ export const dictionaries: Record<Lang, Dictionary> = {
       phonesTitle: 'Əlaqə nömrələri',
       mailTitle: 'E-poçt',
       addressTitle: 'Ünvan',
-      address: 'Şamil Əzizbəyov 154, Bakı, Azərbaycan',
+      address: 'Bakı şəhəri, Nizami rayonu, Bəhruz Nuriyev küçəsi 24a',
       phones: [
         'Salfetlər, diş çubuqları, şəkər tozu, birdəfəlik məhsullar',
         'Paketlər, stəkanlar və qablaşdırma məhsulları',

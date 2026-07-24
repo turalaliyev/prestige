@@ -14,6 +14,12 @@ import footerLogo from '../assets/Images/Logo/logo3.webp'
 import footerPhoneIcon from '../assets/Images/Footer/Phone.svg'
 import footerMailIcon from '../assets/Images/Footer/Mail.webp'
 import footerAddressIcon from '../assets/Images/Footer/Address.webp'
+import serviceSlide1 from '../assets/Images/Services/Service1.webp'
+import serviceSlide2 from '../assets/Images/Services/Service2.webp'
+import serviceSlide3 from '../assets/Images/Services/Service3.webp'
+import serviceSlide4 from '../assets/Images/Services/Service4.webp'
+import serviceSlide5 from '../assets/Images/Services/Service5.webp'
+import serviceSlide6 from '../assets/Images/Services/Service6.webp'
 import serviceCover from '../assets/Images/Services/Cover.webp'
 import serviceMarketing from '../assets/Images/Services/Marketing.webp'
 import servicePromo from '../assets/Images/Services/PromoSuvenir.webp'
@@ -35,6 +41,45 @@ export const site = {
     linkedin: '#',
   },
 }
+
+export const introSlides = [
+  {
+    id: 'wideformat' as const,
+    contact: '050 278 00 70',
+    phone: '+994502780070',
+    image: serviceSlide1,
+  },
+  {
+    id: 'construction' as const,
+    contact: '050 286 86 87',
+    phone: '+994502868687',
+    image: serviceSlide2,
+  },
+  {
+    id: 'vinyl' as const,
+    contact: '050 245 05 95',
+    phone: '+994502450595',
+    image: serviceSlide3,
+  },
+  {
+    id: 'print' as const,
+    contact: '050 445 90 02',
+    phone: '+994504459002',
+    image: serviceSlide4,
+  },
+  {
+    id: 'merch' as const,
+    contact: '050 245 05 95',
+    phone: '+994502450595',
+    image: serviceSlide5,
+  },
+  {
+    id: 'napkins' as const,
+    contact: '050 245 05 92',
+    phone: '+994502450592',
+    image: serviceSlide6,
+  },
+]
 
 export const portfolio = [
   { src: portfolio1, id: 0 },

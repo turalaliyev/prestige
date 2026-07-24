@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from 'react'
+import { useEffect, useState, type RefCallback } from 'react'
 
 type Options = {
   threshold?: number
@@ -6,37 +6,64 @@ type Options = {
   once?: boolean
 }
 
+function isInViewport(node: HTMLElement, inset = 0.08) {
+  const rect = node.getBoundingClientRect()
+  const viewH = window.innerHeight || document.documentElement.clientHeight
+  const viewW = window.innerWidth || document.documentElement.clientWidth
+  return (
+    rect.bottom > viewH * inset &&
+    rect.top < viewH * (1 - inset) &&
+    rect.right > 0 &&
+    rect.left < viewW
+  )
+}
+
 export function useInView<T extends HTMLElement = HTMLDivElement>(
   options: Options = {},
-): [RefObject<T | null>, boolean] {
-  const { threshold = 0.18, rootMargin = '0px 0px -8% 0px', once = true } = options
-  const ref = useRef<T | null>(null)
+): [RefCallback<T>, boolean] {
+  const { threshold = 0, rootMargin = '0px 0px -10% 0px', once = true } = options
+  const [node, setNode] = useState<T | null>(null)
   const [inView, setInView] = useState(false)
 
   useEffect(() => {
-    const node = ref.current
     if (!node) return
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      isInViewport(node)
+    ) {
       setInView(true)
       return
     }
 
+    let cancelled = false
+
+    const reveal = () => {
+      if (cancelled) return
+      setInView(true)
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true)
-          if (once) observer.unobserve(node)
-        } else if (!once) {
-          setInView(false)
-        }
+        if (!entry.isIntersecting) return
+        reveal()
+        if (once) observer.disconnect()
       },
       { threshold, rootMargin },
     )
 
     observer.observe(node)
-    return () => observer.disconnect()
-  }, [threshold, rootMargin, once])
 
-  return [ref, inView]
+    const safety = window.setTimeout(() => {
+      if (isInViewport(node, 0)) reveal()
+    }, 800)
+
+    return () => {
+      cancelled = true
+      window.clearTimeout(safety)
+      observer.disconnect()
+    }
+  }, [node, threshold, rootMargin, once])
+
+  return [setNode, inView]
 }

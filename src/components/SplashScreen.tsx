@@ -4,6 +4,7 @@ import {
   footer,
   heroImage,
   heroLogo,
+  introSlides,
   partners,
   portfolio,
   services,
@@ -27,6 +28,7 @@ function preloadImages(sources: string[]) {
 const criticalImages = [
   heroImage,
   heroLogo,
+  ...introSlides.map((slide) => slide.image),
   ...portfolio.map((item) => item.src),
   ...services.map((service) => service.image),
   partners.image,

@@ -3,6 +3,7 @@ import { services } from './data/content'
 import { AboutCta } from './components/AboutCta'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
+import { Intro } from './components/Intro'
 import { Partners } from './components/Partners'
 import { PortfolioStrip } from './components/PortfolioStrip'
 import { ServiceBlock } from './components/ServiceBlock'
@@ -16,6 +17,7 @@ export default function App() {
     <div id="top" className="min-h-screen bg-black">
       {showSplash && <SplashScreen onDone={hideSplash} />}
       <Hero ready={!showSplash} />
+      <Intro />
       <PortfolioStrip />
       <div id="services">
         {services.map((service) => (
