@@ -1,19 +1,27 @@
+import { useRef } from 'react'
 import { heroImage, heroLogo } from '../data/content'
 import { useLanguage } from '../i18n/LanguageContext'
+import { HeroEyes } from './HeroEyes'
 import { LanguageSelect } from './LanguageSelect'
 
 export function Hero({ ready = true }: { ready?: boolean }) {
   const { t } = useLanguage()
+  const imageRef = useRef<HTMLImageElement>(null)
+  // The eye overlay has to ride the same intro zoom as the photo it sits on.
+  const zoom = `transition-transform duration-[2.4s] ease-out ${ready ? 'scale-100' : 'scale-110'}`
 
   return (
     <header className="relative isolate min-h-[100svh] overflow-hidden bg-ink">
       <img
+        ref={imageRef}
         src={heroImage}
         alt=""
-        className={`absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[2.4s] ease-out ${
-          ready ? 'scale-100' : 'scale-110'
-        }`}
+        className={`absolute inset-0 h-full w-full object-cover object-center ${zoom}`}
       />
+
+      <div className={`absolute inset-0 ${zoom}`}>
+        <HeroEyes imageRef={imageRef} active={ready} />
+      </div>
 
       <div className="relative z-10 flex min-h-[100svh] flex-col">
         <a
