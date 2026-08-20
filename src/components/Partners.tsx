@@ -1,6 +1,7 @@
 import { partners } from '../data/content'
 import { useLanguage } from '../i18n/LanguageContext'
 import { sectionShell } from './layout'
+import { RecommendationLetters } from './RecommendationLetters'
 import { Reveal } from './Reveal'
 import { SectionLabel } from './SectionLabel'
 
@@ -27,6 +28,7 @@ export function Partners() {
             </p>
           </Reveal>
         </div>
+        <RecommendationLetters />
       </div>
     </section>
   )

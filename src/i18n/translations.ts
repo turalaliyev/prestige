@@ -30,7 +30,14 @@ export type Dictionary = {
     advertising: { label: string; body: string }
     merch: { label: string; body: string }
   }
-  partners: { label: string; body: string }
+  partners: {
+    label: string
+    body: string
+    docsTitle: string
+    docsHint: string
+    docsOpen: string
+    docsAria: string
+  }
   about: { title: string; body: string; experience: string }
   footer: {
     label: string
@@ -107,6 +114,10 @@ export const dictionaries: Record<Lang, Dictionary> = {
     partners: {
       label: 'Partners & recommendations',
       body: 'We value the trust of our clients and partners, so every project focuses on quality, deadlines and attention to detail. Over the years we have completed projects for companies across many industries — from restaurants and stores to major brands and manufacturers. We are recommended for our professional approach, modern solutions and reliable delivery of projects of any complexity. We aim for long-term partnerships and projects that help businesses stand out and grow.',
+      docsTitle: 'Recommendation letters',
+      docsHint: 'Originals from our clients — open any letter to read it in full.',
+      docsOpen: 'Open letter',
+      docsAria: 'Open the recommendation letter from',
     },
     about: {
       title: 'Advertising company',
@@ -204,6 +215,10 @@ export const dictionaries: Record<Lang, Dictionary> = {
     partners: {
       label: 'Партнёры и рекомендации',
       body: 'Мы ценим доверие клиентов и партнёров, поэтому в каждом проекте делаем акцент на качестве, сроках и внимании к деталям. За время работы мы реализовали проекты для компаний из разных сфер — от ресторанов и магазинов до крупных брендов и производств. Нас рекомендуют за профессиональный подход, современные решения и надёжное выполнение задач любой сложности. Мы стремимся к долгосрочному партнёрству и проектам, которые помогают бизнесу выделяться и расти.',
+      docsTitle: 'Рекомендательные письма',
+      docsHint: 'Оригиналы писем наших клиентов — откройте любое, чтобы прочитать целиком.',
+      docsOpen: 'Открыть письмо',
+      docsAria: 'Открыть рекомендательное письмо от компании',
     },
     about: {
       title: 'Рекламная компания',
@@ -301,6 +316,10 @@ export const dictionaries: Record<Lang, Dictionary> = {
     partners: {
       label: 'Tərəfdaşlar və tövsiyələr',
       body: 'Müştəri və tərəfdaşlarımızın etimadını qiymətləndiririk, ona görə hər layihədə keyfiyyətə, müddətlərə və detallara diqqət yetiririk. İllər ərzində müxtəlif sahələrdən — restoran və mağazalardan iri brendlərə və istehsalçılara qədər — layihələr həyata keçirmişik. Peşəkar yanaşma, müasir həllər və etibarlı icra üçün tövsiyə olunuruq. Uzunmüddətli tərəfdaşlıq və biznesin seçilməsinə, inkişafına kömək edən layihələr hədəfləyirik.',
+      docsTitle: 'Tövsiyə məktubları',
+      docsHint: 'Müştərilərimizin orijinal məktubları — tam oxumaq üçün istənilənini açın.',
+      docsOpen: 'Məktubu aç',
+      docsAria: 'Tövsiyə məktubunu aç —',
     },
     about: {
       title: 'Reklam şirkəti',

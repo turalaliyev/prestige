@@ -30,7 +30,9 @@ const criticalImages = [
   heroLogo,
   ...introSlides.map((slide) => slide.image),
   ...portfolio.map((item) => item.src),
-  ...services.map((service) => service.image),
+  ...services.flatMap(
+    (service) => service.slides?.slice(0, 1).map((s) => s.src) ?? service.image ?? [],
+  ),
   partners.image,
   about.image,
   about.logo,

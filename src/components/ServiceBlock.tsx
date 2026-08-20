@@ -1,15 +1,22 @@
 import { services } from '../data/content'
 import { useLanguage } from '../i18n/LanguageContext'
+import { ImageSlider, type Slide } from './ImageSlider'
 import { sectionSplit } from './layout'
 import { Reveal } from './Reveal'
 import { SectionLabel } from './SectionLabel'
 
+type ServiceBlockProps = (typeof services)[number] & {
+  image?: string
+  slides?: Slide[]
+}
+
 export function ServiceBlock({
   id,
   image,
+  slides,
   dark,
   imageRight,
-}: (typeof services)[number]) {
+}: ServiceBlockProps) {
   const { t } = useLanguage()
   const copy = t.services[id]
 
@@ -37,13 +44,19 @@ export function ServiceBlock({
         <Reveal
           variant={imageRight ? 'right' : 'left'}
           delay={120}
-          className="min-w-0 overflow-hidden"
+          className="group min-w-0 overflow-hidden"
         >
-          <img
-            src={image}
-            alt={copy.label}
-            className="aspect-[5/4] w-full object-cover transition duration-700 hover:scale-[1.03]"
-          />
+          {slides && slides.length > 0 ? (
+            <ImageSlider slides={slides} alt={copy.label} />
+          ) : (
+            image && (
+              <img
+                src={image}
+                alt={copy.label}
+                className="slider-zoom aspect-[5/4] w-full object-cover"
+              />
+            )
+          )}
         </Reveal>
       </div>
     </section>
