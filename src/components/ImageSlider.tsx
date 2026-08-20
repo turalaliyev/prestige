@@ -27,7 +27,7 @@ const prefersReducedMotion = () =>
 export function ImageSlider({
   slides,
   alt,
-  interval = 3000,
+  interval = 2000,
   aspect = 'aspect-[5/4]',
   paused = false,
   className = '',

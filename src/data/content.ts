@@ -145,14 +145,14 @@ export const napkinSlides = [
 export const introSlides = [
   {
     id: 'wideformat' as const,
-    contact: '050 278 00 70',
-    phone: '+994502780070',
+    contact: '050 245 05 95',
+    phone: '+994502450595',
     image: serviceSlide1,
   },
   {
     id: 'construction' as const,
-    contact: '050 286 86 87',
-    phone: '+994502868687',
+    contact: '050 245 05 95',
+    phone: '+994502450595',
     image: serviceSlide2,
   },
   {
@@ -163,14 +163,14 @@ export const introSlides = [
   },
   {
     id: 'print' as const,
-    contact: '050 445 90 02',
-    phone: '+994504459002',
+    contact: '050 245 05 95',
+    phone: '+994502450595',
     image: serviceSlide4,
   },
   {
     id: 'merch' as const,
-    contact: '050 245 05 89',
-    phone: '+994502450589',
+    contact: '050 245 05 95',
+    phone: '+994502450595',
     image: serviceSlide5,
   },
   {
@@ -346,18 +346,18 @@ export const footer = {
     },
     {
       icon: 'print',
-      display: '+994 50 445 90 02',
-      tel: '+994504459002',
+      display: '+994 50 245 05 95',
+      tel: '+994502450595',
     },
     {
       icon: 'construction',
-      display: '+994 50 286 86 87',
-      tel: '+994502868687',
+      display: '+994 50 245 05 95',
+      tel: '+994502450595',
     },
     {
       icon: 'gift',
-      display: '+994 50 245 05 89',
-      tel: '+994502450589',
+      display: '+994 50 245 05 95',
+      tel: '+994502450595',
     },
     {
       icon: 'vinyl',
@@ -366,8 +366,8 @@ export const footer = {
     },
     {
       icon: 'wideformat',
-      display: '+994 50 278 00 70',
-      tel: '+994502780070',
+      display: '+994 50 245 05 95',
+      tel: '+994502450595',
     },
   ],
 }
