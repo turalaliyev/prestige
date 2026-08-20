@@ -105,6 +105,84 @@ export const plates: Record<string, Plate> = {
     size: '50% 100%, 50% 100%',
     position: 'left center, right center',
   },
+  'Packages/17.webp': {
+    image:
+      'linear-gradient(90deg, #c9d5e5 8%, #cad5e4 25%, #cbd4e1 42%, #c8cfdc 58%, #c6cbd7 75%, #bcc3ce 92%), linear-gradient(90deg, #d6dde9 8%, #dbe0ec 25%, #d8dee9 42%, #dadfe8 58%, #d6dbe5 75%, #d5dbe4 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Packages/18.webp': {
+    image:
+      'linear-gradient(180deg, #010101 8%, #000000 25%, #010101 42%, #000000 58%, #010101 75%, #000000 92%), linear-gradient(180deg, #020202 8%, #010101 25%, #020202 42%, #010101 58%, #000000 75%, #000000 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/19.webp': {
+    image:
+      'linear-gradient(180deg, #999fa1 8%, #a5adaf 25%, #acb1b3 42%, #b2b6b9 58%, #bac1bf 75%, #c6cbc9 92%), linear-gradient(180deg, #9ca1a0 8%, #a7acab 25%, #abb0af 42%, #b5bab9 58%, #bac1bf 75%, #c0c7c5 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/20.webp': {
+    image:
+      'linear-gradient(180deg, #141413 8%, #0f0f0f 25%, #080808 42%, #030303 58%, #151513 75%, #242422 92%), linear-gradient(180deg, #151514 8%, #10100f 25%, #0a0a0a 42%, #030303 58%, #161714 75%, #2d2e2b 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/21.webp': {
+    image:
+      'linear-gradient(180deg, #908c89 8%, #d0ccc3 25%, #d1cec8 42%, #c8c5bc 58%, #afa89f 75%, #a09a90 92%), linear-gradient(180deg, #645d54 8%, #6f6a69 25%, #7b8084 42%, #383938 58%, #6f685d 75%, #7b746b 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/22.webp': {
+    image:
+      'linear-gradient(180deg, #161616 8%, #101010 25%, #070707 42%, #0e0e0e 58%, #1e1f1c 75%, #2c2b29 92%), linear-gradient(180deg, #151515 8%, #101010 25%, #080808 42%, #0e0e0e 58%, #282724 75%, #34322e 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/23.webp': {
+    image:
+      'linear-gradient(180deg, #c6c3a1 8%, #989489 25%, #8e9091 42%, #cdd4dc 58%, #a4a8ad 75%, #b8bdbd 92%), linear-gradient(180deg, #c6ccba 8%, #b4bab0 25%, #bab4b1 42%, #dad2d0 58%, #d0d3d5 75%, #b6b8b9 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/24.webp': {
+    image:
+      'linear-gradient(180deg, #e2e7e5 8%, #e1e6e3 25%, #dcdfde 42%, #d9dddc 58%, #d4d9d7 75%, #d4d7d7 92%), linear-gradient(180deg, #dfe4e0 8%, #dfe4df 25%, #dce0de 42%, #dadddc 58%, #dadddc 75%, #d8dddb 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/25.webp': {
+    image:
+      'linear-gradient(180deg, #151515 8%, #101010 25%, #0a0a0a 42%, #1a1a1a 58%, #1c1c1c 75%, #1f1f1f 92%), linear-gradient(180deg, #141414 8%, #111111 25%, #0a0a0a 42%, #181818 58%, #212121 75%, #262626 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/26.webp': {
+    image:
+      'linear-gradient(180deg, #fdfdfd 8%, #fdfdfd 25%, #fdfdfd 42%, #fdfdfd 58%, #fdfdfd 75%, #fdfdfd 92%), linear-gradient(180deg, #fdfdfd 8%, #fdfdfd 25%, #fdfdfd 42%, #fdfdfd 58%, #fdfdfd 75%, #fdfdfd 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/27.webp': {
+    image:
+      'linear-gradient(180deg, #d7dbdb 8%, #d8dddb 25%, #d1d4d5 42%, #b7bcbc 58%, #d0d4d3 75%, #d8dadb 92%), linear-gradient(180deg, #d2d6d8 8%, #ccd0d3 25%, #caced0 42%, #b4bcbd 58%, #c3cbcc 75%, #cacfd1 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/28.webp': {
+    image:
+      'linear-gradient(180deg, #ced0cf 8%, #d0d4d4 25%, #babbb8 42%, #959090 58%, #bdc0bf 75%, #d0d3d2 92%), linear-gradient(180deg, #d5dad9 8%, #ced0cf 25%, #cdcfcd 42%, #b6b7b6 58%, #c4c7c6 75%, #cbcecd 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Packages/29.webp': {
+    image:
+      'linear-gradient(180deg, #d3dbdd 8%, #ced0d2 25%, #e2e6e9 42%, #dddfe2 58%, #caced1 75%, #e3e5e5 92%), linear-gradient(180deg, #d1d3d6 8%, #d6d7db 25%, #dce4e6 42%, #d8dbda 58%, #ced2d3 75%, #dfe2e3 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
   'Collection/1.webp': {
     image:
       'linear-gradient(180deg, #f8f4e8 8%, #d8d4cb 25%, #ddd5c2 42%, #ded5c1 58%, #e2dc88 75%, #775d45 92%), linear-gradient(180deg, #c995ba 8%, #776e87 25%, #4c4e4d 42%, #3d3f43 58%, #2f3238 75%, #413c39 92%)',
@@ -174,6 +252,138 @@ export const plates: Record<string, Plate> = {
   'Collection/12.webp': {
     image:
       'linear-gradient(180deg, #fbdfa8 8%, #493723 25%, #24190e 42%, #2d2016 58%, #34251b 75%, #6e5c42 92%), linear-gradient(180deg, #80705d 8%, #7e6143 25%, #765f42 42%, #57442e 58%, #947a5b 75%, #feeaba 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Collection/13.webp': {
+    image:
+      'linear-gradient(90deg, #b2bcd1 8%, #acb7cd 25%, #8a9cbb 42%, #8296b7 58%, #a9b6ce 75%, #b0bbd1 92%), linear-gradient(90deg, #827e76 8%, #302d29 25%, #cab89b 42%, #aaaa98 58%, #d0bc9d 75%, #816952 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Collection/14.webp': {
+    image:
+      'linear-gradient(90deg, #0c0707 8%, #0b0606 25%, #0c0605 42%, #8f7153 58%, #6a5337 75%, #120908 92%), linear-gradient(90deg, #0e0606 8%, #0d0605 25%, #0d0605 42%, #0c0605 58%, #0e0705 75%, #100807 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Collection/15.webp': {
+    image:
+      'linear-gradient(90deg, #100506 8%, #090407 25%, #080307 42%, #080307 58%, #080307 75%, #080307 92%), linear-gradient(90deg, #190f0f 8%, #19100f 25%, #1b1211 42%, #19100f 58%, #180d0d 75%, #170c0b 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Collection/16.webp': {
+    image:
+      'linear-gradient(90deg, #895233 8%, #89593a 25%, #87532e 42%, #855128 58%, #815128 75%, #805025 92%), linear-gradient(90deg, #322215 8%, #702d23 25%, #392b24 42%, #640f0b 58%, #3c1606 75%, #562008 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Collection/17.webp': {
+    image:
+      'linear-gradient(180deg, #f9ffff 8%, #ffffff 25%, #879297 42%, #383d45 58%, #222828 75%, #1d1617 92%), linear-gradient(180deg, #5f5d56 8%, #503e3c 25%, #655750 42%, #666764 58%, #12160e 75%, #3b4140 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Collection/18.webp': {
+    image:
+      'linear-gradient(180deg, #c5b7a6 8%, #c6bcb2 25%, #e9ccac 42%, #141509 58%, #080503 75%, #000002 92%), linear-gradient(180deg, #917859 8%, #8e7454 25%, #8e7454 42%, #9d7d5a 58%, #b18e68 75%, #cba57b 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Vynil/1.webp': {
+    image:
+      'linear-gradient(180deg, #635641 8%, #af3e3a 25%, #b6423f 42%, #393434 58%, #232122 75%, #4f4a43 92%), linear-gradient(180deg, #47494a 8%, #b14442 25%, #ae4240 42%, #9b2f32 58%, #352c2f 75%, #524b46 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Vynil/2.webp': {
+    image:
+      'linear-gradient(180deg, #d9645f 8%, #9f3f34 25%, #9c3a2f 42%, #a14238 58%, #a23e32 75%, #46413a 92%), linear-gradient(180deg, #fa8869 8%, #a9473b 25%, #91362d 42%, #9e463c 58%, #9f493e 75%, #47433b 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/1.webp': {
+    image:
+      'linear-gradient(180deg, #e5e8f7 8%, #e9edfc 25%, #e9effe 42%, #e9f0fe 58%, #e8effd 75%, #e6ebf9 92%), linear-gradient(180deg, #dbdeed 8%, #e0e3f2 25%, #e2e4f3 42%, #e3e5f5 58%, #e1e4f3 75%, #dee0ef 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/2.webp': {
+    image:
+      'linear-gradient(180deg, #e7ecfa 8%, #e9f0fe 25%, #ecf3fe 42%, #edf4ff 58%, #edf4ff 75%, #e9f0fe 92%), linear-gradient(180deg, #e2e8f4 8%, #e6ebf8 25%, #e9eefa 42%, #e9eefa 58%, #e8ecf8 75%, #e4e8f4 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/3.webp': {
+    image:
+      'linear-gradient(180deg, #e9edfa 8%, #eaeffb 25%, #eaeffb 42%, #e8edfa 58%, #e8ecf8 75%, #e5e8f5 92%), linear-gradient(180deg, #e7eaf6 8%, #e9eefa 25%, #eaeffb 42%, #eaeffb 58%, #e8ebf9 75%, #e6e8f5 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/4.webp': {
+    image:
+      'linear-gradient(90deg, #e6e8f5 8%, #e8ebf8 25%, #eaecfc 42%, #eaecfc 58%, #e8ebf8 75%, #e6e8f5 92%), linear-gradient(90deg, #e6ebf7 8%, #e8eefa 25%, #eaeffb 42%, #e9f1fc 58%, #e9eefa 75%, #e5eaf6 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Napkins/5.webp': {
+    image:
+      'linear-gradient(180deg, #e9eefa 8%, #e9f0fb 25%, #e9f1fc 42%, #e9f1fc 58%, #e7eefa 75%, #e5ebf6 92%), linear-gradient(180deg, #e6ecf8 8%, #e9effb 25%, #ebf0fc 42%, #ebf0fc 58%, #e9eefa 75%, #e7ecf7 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/6.webp': {
+    image:
+      'linear-gradient(180deg, #e8ecf8 8%, #e9eefa 25%, #e9eefa 42%, #e6ebf7 58%, #e4e9f5 75%, #dee4ef 92%), linear-gradient(180deg, #e6eaf6 8%, #e9eefb 25%, #ebf0fc 42%, #ebf0fc 58%, #eaeffb 75%, #e6e8f5 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/7.webp': {
+    image:
+      'linear-gradient(180deg, #eaeffb 8%, #ebf1fd 25%, #ebf1fc 42%, #e9effb 58%, #e6ebf7 75%, #e2e7f3 92%), linear-gradient(180deg, #e7ecf8 8%, #eaeffb 25%, #ecf1fd 42%, #ebf0fc 58%, #eaeffb 75%, #e6e9f6 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/8.webp': {
+    image:
+      'linear-gradient(180deg, #e6e8f5 8%, #e6ebf7 25%, #e6ebf7 42%, #e7e9f6 58%, #e5e7f4 75%, #e2e5f1 92%), linear-gradient(180deg, #e7edf8 8%, #e9f1fc 25%, #ecf3fe 42%, #ecf3fe 58%, #ebf1fd 75%, #e8effb 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/9.webp': {
+    image:
+      'linear-gradient(90deg, #e6e8f5 8%, #e9ecfa 25%, #ebf0fc 42%, #ebf0fc 58%, #eaeffb 75%, #e8ecf8 92%), linear-gradient(90deg, #e6e8f5 8%, #e7ebf7 25%, #e9edfa 42%, #e8ecf8 58%, #e7ebf7 75%, #e5e7f3 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Napkins/10.webp': {
+    image:
+      'linear-gradient(180deg, #e8ebf7 8%, #ebf0fc 25%, #edf2fe 42%, #edf2fe 58%, #ecf2fd 75%, #e9eefa 92%), linear-gradient(180deg, #e5e7f3 8%, #e7ebf7 25%, #e9ecfa 42%, #e9edfa 58%, #e7eaf7 75%, #e5e7f3 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/11.webp': {
+    image:
+      'linear-gradient(180deg, #eaeffb 8%, #ebf2fd 25%, #ecf3fe 42%, #ecf3fe 58%, #ecf3fe 75%, #e8eefa 92%), linear-gradient(180deg, #e8ecf8 8%, #eaf0fb 25%, #ebf0fc 42%, #ebf0fc 58%, #eaeffb 75%, #e7ecf7 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/12.webp': {
+    image:
+      'linear-gradient(180deg, #dfe4f0 8%, #e5e7f4 25%, #e6e8f5 42%, #e6e8f5 58%, #e2e7f3 75%, #dce3ed 92%), linear-gradient(180deg, #dce1eb 8%, #e1e5f1 25%, #e3e7f3 42%, #e3e7f3 58%, #e1e5f0 75%, #dbe0ea 92%)',
+    size: '50% 100%, 50% 100%',
+    position: 'left center, right center',
+  },
+  'Napkins/13.webp': {
+    image:
+      'linear-gradient(90deg, #cdcfe0 8%, #d5d7e8 25%, #dbddef 42%, #dee1f2 58%, #dcdff1 75%, #d9daeb 92%), linear-gradient(90deg, #ced2e2 8%, #d4d8e9 25%, #d5d9ea 42%, #d4d9e9 58%, #ccd2e2 75%, #c1c6d5 92%)',
+    size: '100% 50%, 100% 50%',
+    position: 'center top, center bottom',
+  },
+  'Napkins/14.webp': {
+    image:
+      'linear-gradient(180deg, #d0d6e4 8%, #d8dbec 25%, #dae1f1 42%, #dae1f1 58%, #d9e0f0 75%, #d1d8e6 92%), linear-gradient(180deg, #cacddc 8%, #d0d5e4 25%, #d4d8e7 42%, #d5d8e8 58%, #d0d5e4 75%, #caccdb 92%)',
     size: '50% 100%, 50% 100%',
     position: 'left center, right center',
   },

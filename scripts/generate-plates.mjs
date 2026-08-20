@@ -14,14 +14,16 @@
 import sharp from 'sharp'
 import { writeFileSync } from 'fs'
 
-/** Frame aspect ratio the slider renders at — must match ImageSlider. */
-const FRAME_ASPECT = 5 / 4
 /** Colour stops per bar. Enough to follow a gradient, few enough to stay legible. */
 const SEGMENTS = 6
 
+// `frame` is the aspect the slider renders that set at — it decides which pair
+// of bars `object-contain` leaves empty, so it must match the ImageSlider call.
 const SETS = [
-  { dir: 'Packages', count: 16 },
-  { dir: 'Collection', count: 12 },
+  { dir: 'Packages', count: 29, frame: 5 / 4 },
+  { dir: 'Collection', count: 18, frame: 5 / 4 },
+  { dir: 'Vynil', count: 2, frame: 4 / 3 },
+  { dir: 'Napkins', count: 14, frame: 4 / 3 },
 ]
 
 const hex = (r, g, b) =>
@@ -96,9 +98,9 @@ function edgeGradient(img, edge) {
   return `linear-gradient(${angle}, ${stops.join(', ')})`
 }
 
-async function plateFor(file) {
+async function plateFor(file, frame) {
   const img = await readPixels(file)
-  const bars = img.width / img.height > FRAME_ASPECT ? 'horizontal' : 'vertical'
+  const bars = img.width / img.height > frame ? 'horizontal' : 'vertical'
 
   if (bars === 'vertical') {
     // Portrait in a landscape frame: bars sit left and right, full height.
@@ -117,10 +119,10 @@ async function plateFor(file) {
 }
 
 const entries = []
-for (const { dir, count } of SETS) {
+for (const { dir, count, frame } of SETS) {
   for (let n = 1; n <= count; n++) {
     const key = `${dir}/${n}.webp`
-    entries.push([key, await plateFor(`src/assets/${key}`)])
+    entries.push([key, await plateFor(`src/assets/${key}`, frame)])
     process.stdout.write(`  ${key}\n`)
   }
 }

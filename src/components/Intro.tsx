@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { introSlides } from '../data/content'
 import { useLanguage } from '../i18n/LanguageContext'
+import { ImageSlider } from './ImageSlider'
 import { sectionShell, sectionSplit } from './layout'
 import { SectionLabel } from './SectionLabel'
 
@@ -51,19 +52,34 @@ export function Intro() {
 
         <div className="relative min-w-0 overflow-hidden">
           {introSlides.map((item, index) => (
-            <img
+            <div
               key={item.id}
-              src={item.image}
-              alt={t.intro.slides[item.id].title}
-              loading="eager"
-              decoding="async"
-              fetchPriority={index === 0 ? 'high' : 'low'}
-              className={`aspect-[4/3] w-full object-cover transition-opacity duration-500 ${
+              className={`transition-opacity duration-500 ${
                 index === active
                   ? 'relative opacity-100'
                   : 'pointer-events-none absolute inset-0 opacity-0'
               }`}
-            />
+            >
+              {item.slides ? (
+                // Every slide stays mounted for the crossfade, so the ones
+                // out of sight must not keep cycling in the background.
+                <ImageSlider
+                  slides={item.slides}
+                  alt={t.intro.slides[item.id].title}
+                  aspect="aspect-[4/3]"
+                  paused={index !== active}
+                />
+              ) : (
+                <img
+                  src={item.image}
+                  alt={t.intro.slides[item.id].title}
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority={index === 0 ? 'high' : 'low'}
+                  className="aspect-[4/3] w-full object-cover"
+                />
+              )}
+            </div>
           ))}
         </div>
       </div>

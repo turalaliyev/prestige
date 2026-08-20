@@ -12,6 +12,11 @@ type ImageSliderProps = {
   slides: Slide[]
   alt: string
   interval?: number
+  /** Frame ratio. Must match the `frame` for this set in generate-plates.mjs,
+      since that decides which bars the plate gradients fill. */
+  aspect?: string
+  /** Held by a parent that has this slider mounted but out of sight. */
+  paused?: boolean
   className?: string
 }
 
@@ -23,6 +28,8 @@ export function ImageSlider({
   slides,
   alt,
   interval = 3000,
+  aspect = 'aspect-[5/4]',
+  paused = false,
   className = '',
 }: ImageSliderProps) {
   const [index, setIndex] = useState(0)
@@ -75,11 +82,11 @@ export function ImageSlider({
   }, [])
 
   useEffect(() => {
-    if (!active || slides.length < 2 || prefersReducedMotion()) return
+    if (!active || paused || slides.length < 2 || prefersReducedMotion()) return
 
     const id = window.setTimeout(() => go(index + 1), interval)
     return () => window.clearTimeout(id)
-  }, [active, go, index, interval, slides.length])
+  }, [active, go, index, interval, paused, slides.length])
 
   return (
     <div
@@ -89,7 +96,7 @@ export function ImageSlider({
       aria-roledescription="carousel"
       aria-label={alt}
     >
-      <div className="relative aspect-[5/4] w-full bg-white">
+      <div className={`relative w-full bg-white ${aspect}`}>
         {/* Backdrops crossfade on the same clock as the images, so the bars
             never show the previous slide's colours. Kept outside the zoom
             wrapper — the bars should stay put while the photo scales. */}

@@ -28,7 +28,9 @@ function preloadImages(sources: string[]) {
 const criticalImages = [
   heroImage,
   heroLogo,
-  ...introSlides.map((slide) => slide.image),
+  ...introSlides.flatMap(
+    (slide) => slide.slides?.slice(0, 1).map((s) => s.src) ?? slide.image ?? [],
+  ),
   ...portfolio.map((item) => item.src),
   ...services.flatMap(
     (service) => service.slides?.slice(0, 1).map((s) => s.src) ?? service.image ?? [],
